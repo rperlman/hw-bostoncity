@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!-- document style -->
+<style>
+    .format {
+        font-size: 1.5em;
+        font-family: arial
+    }
+</style>
+
+<!-- load library -->
+<script src="exercise.js"></script>
+<script src="data.js"></script>
+<!-- buttons used to call functions -->
+<button onclick="call1()" class="format">Get Max Earnings</button>
+<div id='Response1'></div><br>
+
+<button onclick="call2()" class="format">Number earnings above 150,000</button>
+<div id='Response2'></div><br>
+
+<button onclick="call3()" class="format">Total Base Payroll</button>
+<div id='Response3'></div><br>
+
+<button onclick="call4()" class="format">Total Earnings Payroll</button>
+<div id='Response4'></div><br>
+
+<button onclick="call5()" class="format">Number Unique Zip Codes</button>
+<div id='Response5'></div><br>
+
+<script>
+    exercise.data = data;
+
+    function call1() {
+        var response = exercise.maxEarnings();
+        document.getElementById('Response1').innerHTML = response;
+    }
+
+    function call2() {
+        var response = exercise.earningsAbove(150000);
+        document.getElementById('Response2').innerHTML = response;
+    }
+
+    function call3() {
+        var response = exercise.totalBasePayroll();
+        document.getElementById('Response3').innerHTML = response;
+    }
+
+    function call4() {
+        var response = exercise.totalEarningsWithOvertime();
+        document.getElementById('Response4').innerHTML = response;
+    }
+
+    function call5() {
+        var response = exercise.numberUniqueZipCodes();
+        document.getElementById('Response5').innerHTML = response;
+    }
+</script>
+
+
+</html>
